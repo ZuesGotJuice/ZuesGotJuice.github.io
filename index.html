@@ -1,89 +1,436 @@
----
-layout: default
----
-<img src="/assets/img/veridate-logo.png" alt="VeriDate Logo" width="250">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-# VeriDate
+<title>VeriDate — Verify the Person. Trust the Connection.</title>
 
-## Verify the Person. Trust the Connection.
+<script src="https://cdn.tailwindcss.com"></script>
 
-The future of online trust starts with real identity verification.
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-VeriDate is an AI-powered identity verification and trust scoring platform designed to help people and businesses create safer digital experiences by reducing fake accounts, scammers, and fraudulent identities.
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
 
----
+body {
+    font-family: 'Inter', sans-serif;
+}
 
-## The Problem
+.heading-font {
+    font-family: 'Space Grotesk', sans-serif;
+}
 
-Online platforms are facing a growing trust crisis:
+.hero-bg {
+    background: linear-gradient(135deg,#050505,#111827,#050505);
+}
 
-- Fake profiles and impersonation
-- Catfishing and romance scams
-- Bots and fraudulent accounts
-- Lack of accountability between users
+.glass {
+    background: rgba(255,255,255,.05);
+    backdrop-filter: blur(20px);
+    border:1px solid rgba(255,255,255,.1);
+}
 
-People need a better way to know who they are interacting with.
+.neon {
+    text-shadow:0 0 20px rgba(59,130,246,.8);
+}
 
----
+.card-hover {
+    transition:.3s;
+}
 
-## The Solution
+.card-hover:hover {
+    transform:translateY(-8px);
+}
+</style>
 
-VeriDate creates a trust layer for the internet through:
+</head>
 
-### Identity Verification
-Confirm users are real through advanced verification methods.
+<body class="bg-zinc-950 text-zinc-200">
 
-### Liveness Detection
-Help prevent stolen identities and fake profiles.
+<!-- NAV -->
 
-### Trust Scoring
-Build reputation based on verified signals and platform activity.
+<nav class="fixed top-0 w-full z-50 bg-zinc-950/80 backdrop-blur border-b border-zinc-800">
 
-### Fraud Detection
-Identify suspicious behavior and protect communities.
+<div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
 
----
+<div class="flex items-center gap-3">
 
-## How VeriDate Works
+<img src="/assets/img/veridate-logo.png"
+alt="VeriDate Logo"
+class="w-10 h-10">
 
-**1. Create Your Identity Profile**
+<span class="heading-font text-2xl">
+VeriDate
+</span>
 
-Users securely establish their verified identity.
+</div>
 
-**2. Complete Verification Checks**
 
-Email, phone, identity, and liveness verification build trust.
+<div class="hidden md:flex gap-8 text-sm">
 
-**3. Generate Your Trust Score**
+<a href="#problem">Problem</a>
+<a href="#solution">Solution</a>
+<a href="#platforms">Platforms</a>
+<a href="#contact">Contact</a>
 
-Verified signals contribute to a user's trust profile.
+</div>
 
-**4. Connect With Confidence**
 
-Platforms and communities can create safer interactions.
+<a href="#beta"
+class="bg-white text-black px-6 py-3 rounded-xl font-semibold">
 
----
+Join Beta
 
-## Built For The Future Of Digital Trust
+</a>
 
-VeriDate is developing verification infrastructure for:
 
-- Dating platforms
-- Social networks
-- Marketplaces
-- Online communities
-- Digital services
+</div>
 
----
+</nav>
 
-## Join The VeriDate Beta
 
-We are building the next generation of online trust.
 
-Stay updated as we launch.
+<!-- HERO -->
 
-[Join the Waitlist](#)
+<section class="hero-bg min-h-screen flex items-center pt-24">
 
----
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
 
-© 2026 VeriDate. All rights reserved.
+
+<div>
+
+<p class="text-blue-400 mb-5">
+AI-Powered Identity Verification
+</p>
+
+
+<h1 class="heading-font text-6xl md:text-7xl font-bold neon">
+
+Verify the Person.
+<br>
+
+<span class="text-blue-400">
+Trust the Connection.
+</span>
+
+</h1>
+
+
+<p class="text-xl text-zinc-400 mt-8">
+
+VeriDate is building the trust layer of the internet through identity verification, liveness detection, trust scoring, and fraud intelligence.
+
+</p>
+
+
+<div class="mt-10 flex gap-4">
+
+
+<a href="#beta"
+class="bg-white text-black px-8 py-4 rounded-xl font-bold">
+
+Join Private Beta
+
+</a>
+
+
+<a href="#platforms"
+class="border border-zinc-600 px-8 py-4 rounded-xl">
+
+Request API Access
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="glass rounded-3xl p-8">
+
+<div class="text-center">
+
+<i class="fa-solid fa-shield-halved text-6xl text-blue-400"></i>
+
+<h3 class="text-3xl font-bold mt-6">
+
+Trust Score Engine
+
+</h3>
+
+
+<p class="text-zinc-400 mt-4">
+
+Identity signals, verification checks, and fraud intelligence working together.
+
+</p>
+
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+<!-- PROBLEM -->
+
+
+<section id="problem" class="py-24 bg-zinc-900">
+
+
+<div class="max-w-7xl mx-auto px-6">
+
+
+<h2 class="heading-font text-5xl font-bold">
+
+The Internet Has A Trust Problem
+
+</h2>
+
+
+<div class="grid md:grid-cols-3 gap-8 mt-12">
+
+
+<div class="glass p-8 rounded-3xl card-hover">
+
+<h3 class="text-2xl font-bold">
+Fake Accounts
+</h3>
+
+<p class="text-zinc-400 mt-4">
+Bots, fake profiles, and synthetic identities create unsafe digital experiences.
+</p>
+
+</div>
+
+
+
+<div class="glass p-8 rounded-3xl card-hover">
+
+<h3 class="text-2xl font-bold">
+Scams & Impersonation
+</h3>
+
+<p class="text-zinc-400 mt-4">
+Users need better ways to know who they are interacting with online.
+</p>
+
+</div>
+
+
+
+<div class="glass p-8 rounded-3xl card-hover">
+
+<h3 class="text-2xl font-bold">
+No Digital Trust Layer
+</h3>
+
+<p class="text-zinc-400 mt-4">
+Platforms lack reliable identity signals and reputation systems.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<!-- SOLUTION -->
+
+
+<section id="solution" class="py-24">
+
+
+<div class="max-w-7xl mx-auto px-6">
+
+
+<h2 class="heading-font text-5xl font-bold">
+
+The VeriDate Solution
+
+</h2>
+
+
+
+<div class="grid md:grid-cols-4 gap-6 mt-12">
+
+
+<div class="glass p-8 rounded-3xl">
+
+<h3 class="font-bold text-xl">
+Identity Verification
+</h3>
+
+<p class="text-zinc-400 mt-4">
+Confirm users through trusted verification methods.
+</p>
+
+</div>
+
+
+
+<div class="glass p-8 rounded-3xl">
+
+<h3 class="font-bold text-xl">
+Liveness Detection
+</h3>
+
+<p class="text-zinc-400 mt-4">
+Help prevent fake identities and deepfake attempts.
+</p>
+
+</div>
+
+
+
+<div class="glass p-8 rounded-3xl">
+
+<h3 class="font-bold text-xl">
+Trust Scoring
+</h3>
+
+<p class="text-zinc-400 mt-4">
+Generate reputation based on verified signals.
+</p>
+
+</div>
+
+
+
+<div class="glass p-8 rounded-3xl">
+
+<h3 class="font-bold text-xl">
+Fraud Intelligence
+</h3>
+
+<p class="text-zinc-400 mt-4">
+Detect suspicious activity and identity abuse.
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<!-- PLATFORMS -->
+
+
+<section id="platforms" class="py-24 bg-zinc-900">
+
+
+<div class="max-w-7xl mx-auto px-6">
+
+
+<h2 class="heading-font text-5xl font-bold">
+
+Built For Digital Platforms
+
+</h2>
+
+
+<p class="text-zinc-400 text-xl mt-6">
+
+VeriDate provides verification infrastructure through APIs designed for:
+
+</p>
+
+
+<div class="grid md:grid-cols-4 gap-6 mt-10">
+
+
+<div class="glass p-6 rounded-xl">
+Dating Platforms
+</div>
+
+<div class="glass p-6 rounded-xl">
+Social Networks
+</div>
+
+<div class="glass p-6 rounded-xl">
+Marketplaces
+</div>
+
+<div class="glass p-6 rounded-xl">
+Online Communities
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<!-- INVESTORS -->
+
+
+<section id="contact" class="py-24 text-center">
+
+
+<h2 class="heading-font text-5xl font-bold">
+
+Building The Trust Layer Of The Internet
+
+</h2>
+
+
+<p class="text-zinc-400 max-w-2xl mx-auto mt-8 text-xl">
+
+VeriDate is currently developing its MVP and looking for early partners, beta users, and organizations interested in improving digital trust.
+
+</p>
+
+
+<a id="beta"
+href="#"
+class="inline-block mt-10 bg-white text-black px-10 py-4 rounded-xl font-bold">
+
+Join The Beta
+
+</a>
+
+
+</section>
+
+
+
+
+<footer class="border-t border-zinc-800 py-8 text-center text-zinc-500">
+
+© 2026 VeriDate. All Rights Reserved.
+
+</footer>
+
+
+</body>
+</html>
