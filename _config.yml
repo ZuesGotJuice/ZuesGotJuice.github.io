@@ -1,0 +1,10 @@
+theme: jekyll-theme-minimal
+title: VeriDate
+
+description: >
+  Verify the Person. Trust the Connection.
+  AI-powered identity verification and trust scoring for safer digital interactions.
+
+logo: /assets/img/veridate-logo.png
+
+show_downloads: false
