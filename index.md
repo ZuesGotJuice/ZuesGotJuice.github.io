@@ -1,6 +1,7 @@
----<img src="/assets/img/veridate-logo.png" alt="VeriDate Logo" width="250">
+---
 layout: default
 ---
+<img src="/assets/img/veridate-logo.png" alt="VeriDate Logo" width="250">
 
 # VeriDate
 
