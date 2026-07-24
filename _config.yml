@@ -4,8 +4,11 @@ title: VeriDate
 
 description: >
   Verify the Person. Trust the Connection.
-  AI-powered identity verification and trust scoring for safer digital interactions.
+  AI-powered identity verification and trust scoring infrastructure
+  for the next generation of digital platforms.
 
 logo: /assets/img/veridate-logo.png
 
 show_downloads: false
+
+markdown: kramdown
