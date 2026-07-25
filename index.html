@@ -1,691 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VeriDate — Verify the Person. Trust the Connection.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap');
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .heading-font { font-family: 'Space Grotesk', sans-serif; }
 
-<title>VeriDate — Verify the Person. Trust the Connection.</title>
+    .hero-bg {
+      background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(59,130,246,0.15), transparent),
+                  linear-gradient(180deg, #050505 0%, #0a0a0f 100%);
+    }
 
-<script src="https://cdn.tailwindcss.com"></script>
+    .glass {
+      background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    .neon {
+      text-shadow: 0 0 40px rgba(59,130,246,0.5);
+    }
 
+    .card-hover {
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .card-hover:hover {
+      transform: translateY(-6px);
+      border-color: rgba(59,130,246,0.35);
+      box-shadow: 0 20px 40px -12px rgba(0,0,0,0.5);
+    }
 
-<style>
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap');
-
-
-body {
-    font-family:'Inter',sans-serif;
-}
-
-
-.heading-font {
-    font-family:'Space Grotesk',sans-serif;
-}
-
-
-.hero-bg {
-    background:linear-gradient(135deg,#050505,#111827,#050505);
-}
-
-
-.glass {
-
-    background:rgba(255,255,255,.05);
-    backdrop-filter:blur(20px);
-    border:1px solid rgba(255,255,255,.1);
-
-}
-
-
-.neon {
-
-text-shadow:
-0 0 20px rgba(59,130,246,.8);
-
-}
-
-
-.card-hover {
-
-transition:.3s;
-
-}
-
-
-.card-hover:hover {
-
-transform:translateY(-8px);
-
-}
-
-
-</style>
-
-
+    .workflow-line {
+      background: linear-gradient(90deg, transparent, rgba(59,130,246,0.4), transparent);
+    }
+  </style>
 </head>
-
-
-<body class="bg-zinc-950 text-zinc-200">
-
-
-<!-- NAVIGATION -->
-
-
-<nav class="fixed top-0 w-full z-50 bg-zinc-950/80 backdrop-blur border-b border-zinc-800">
-
-
-<div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-
-
-<div class="flex items-center gap-3">
-
-
-<div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center font-bold text-2xl">
-
-V
-
-</div>
-
-
-<span class="heading-font text-2xl">
-
-VeriDate
-
-</span>
-
-
-</div>
-
-
-
-
-<div class="hidden md:flex gap-8 text-sm">
-
-
-<a href="#problem">
-Problem
-</a>
-
-
-<a href="#solution">
-Solution
-</a>
-
-
-<a href="#platforms">
-Platforms
-</a>
-
-
-<a href="#contact">
-Contact
-</a>
-
-
-</div>
-
-
-
-
-<a href="https://tally.so/r/A7OkkN"
-target="_blank"
-class="bg-white text-black px-6 py-3 rounded-xl font-semibold">
-
-
-Join Beta
-
-
-</a>
-
-
-</div>
-
-
-</nav>
-
-
-
-
-
-<!-- HERO -->
-
-
-<section class="hero-bg min-h-screen flex items-center pt-24">
-
-
-<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-
-
-
-<div>
-
-
-
-<p class="text-blue-400 mb-5">
-
-AI-Powered Identity Verification
-
-</p>
-
-
-
-
-<h1 class="heading-font text-6xl md:text-7xl font-bold neon">
-
-
-Verify the Person.
-
-<br>
-
-
-<span class="text-blue-400">
-
-Trust the Connection.
-
-</span>
-
-
-</h1>
-
-
-
-
-<p class="text-xl text-zinc-400 mt-8">
-
-
-VeriDate is building the trust layer of the internet through identity verification, liveness detection, trust scoring, and fraud intelligence.
-
-
-</p>
-
-
-
-
-<div class="mt-10 flex gap-4">
-
-
-<a href="https://tally.so/r/A7OkkN"
-target="_blank"
-class="bg-white text-black px-8 py-4 rounded-xl font-bold">
-
-
-Join Private Beta
-
-
-</a>
-
-
-
-
-
-<a href="mailto:Veridate.team@gmail.com?subject=VeriDate API Access Request"
-class="border border-zinc-600 px-8 py-4 rounded-xl">
-
-
-Request API Access
-
-
-</a>
-
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-<div class="glass rounded-3xl p-8">
-
-
-<div class="text-center">
-
-
-<i class="fa-solid fa-shield-halved text-6xl text-blue-400"></i>
-
-
-<h3 class="text-3xl font-bold mt-6">
-
-
-Trust Score Engine
-
-
-</h3>
-
-
-<p class="text-zinc-400 mt-4">
-
-
-Identity signals, verification checks, and fraud intelligence working together.
-
-
-</p>
-
-
-</div>
-
-
-</div>
-
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<!-- PROBLEM -->
-
-
-<section id="problem" class="py-24 bg-zinc-900">
-
-
-<div class="max-w-7xl mx-auto px-6">
-
-
-<h2 class="heading-font text-5xl font-bold">
-
-
-The Internet Has A Trust Problem
-
-
-</h2>
-
-
-
-<div class="grid md:grid-cols-3 gap-8 mt-12">
-
-
-
-<div class="glass p-8 rounded-3xl card-hover">
-
-<h3 class="text-2xl font-bold">
-
-Fake Accounts
-
-</h3>
-
-<p class="text-zinc-400 mt-4">
-
-Bots, fake profiles, and synthetic identities create unsafe digital experiences.
-
-</p>
-
-</div>
-
-
-
-
-<div class="glass p-8 rounded-3xl card-hover">
-
-
-<h3 class="text-2xl font-bold">
-
-Scams & Impersonation
-
-</h3>
-
-
-<p class="text-zinc-400 mt-4">
-
-Users need better ways to know who they are interacting with online.
-
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="glass p-8 rounded-3xl card-hover">
-
-
-<h3 class="text-2xl font-bold">
-
-No Digital Trust Layer
-
-</h3>
-
-
-<p class="text-zinc-400 mt-4">
-
-Platforms lack reliable identity signals and reputation systems.
-
-</p>
-
-
-</div>
-
-
-
-</div>
-
-
-</div>
-
-
-</section><!-- SOLUTION -->
-
-<section id="solution" class="py-24">
-
-
-<div class="max-w-7xl mx-auto px-6">
-
-
-<h2 class="heading-font text-5xl font-bold">
-
-The VeriDate Solution
-
-</h2>
-
-
-
-
-<div class="grid md:grid-cols-4 gap-6 mt-12">
-
-
-
-<div class="glass p-8 rounded-3xl">
-
-<h3 class="font-bold text-xl">
-
-Identity Verification
-
-</h3>
-
-
-<p class="text-zinc-400 mt-4">
-
-Confirm users through trusted verification methods.
-
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="glass p-8 rounded-3xl">
-
-
-<h3 class="font-bold text-xl">
-
-Liveness Detection
-
-</h3>
-
-
-<p class="text-zinc-400 mt-4">
-
-Help prevent fake identities and deepfake attempts.
-
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="glass p-8 rounded-3xl">
-
-
-<h3 class="font-bold text-xl">
-
-Trust Scoring
-
-</h3>
-
-
-<p class="text-zinc-400 mt-4">
-
-Generate reputation based on verified signals.
-
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="glass p-8 rounded-3xl">
-
-
-<h3 class="font-bold text-xl">
-
-Fraud Intelligence
-
-</h3>
-
-
-<p class="text-zinc-400 mt-4">
-
-Detect suspicious activity and identity abuse.
-
-</p>
-
-
-</div>
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<!-- PLATFORMS -->
-
-
-<section id="platforms" class="py-24 bg-zinc-900">
-
-
-<div class="max-w-7xl mx-auto px-6">
-
-
-<h2 class="heading-font text-5xl font-bold">
-
-Built For Digital Platforms
-
-</h2>
-
-
-<p class="text-zinc-400 text-xl mt-6">
-
-VeriDate provides verification infrastructure through APIs designed for:
-
-</p>
-
-
-
-
-<div class="grid md:grid-cols-4 gap-6 mt-10">
-
-
-<div class="glass p-6 rounded-xl">
-
-Dating Platforms
-
-</div>
-
-
-
-<div class="glass p-6 rounded-xl">
-
-Social Networks
-
-</div>
-
-
-
-
-<div class="glass p-6 rounded-xl">
-
-Marketplaces
-
-</div>
-
-
-
-
-<div class="glass p-6 rounded-xl">
-
-Online Communities
-
-</div>
-
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<!-- CONTACT / BETA -->
-
-
-<section id="contact" class="py-24 text-center">
-
-
-<h2 class="heading-font text-5xl font-bold">
-
-
-Building The Trust Layer Of The Internet
-
-
-</h2>
-
-
-
-
-<p class="text-zinc-400 max-w-2xl mx-auto mt-8 text-xl">
-
-
-VeriDate is currently developing its MVP and looking for early partners, beta users, and organizations interested in improving digital trust.
-
-
-</p>
-
-
-
-
-<a href="https://tally.so/r/A7OkkN"
-target="_blank"
-class="inline-block mt-10 bg-white text-black px-10 py-4 rounded-xl font-bold">
-
-
-Join The Beta
-
-
-</a>
-
-
-
-
-<div class="mt-10">
-
-
-<p class="text-zinc-500">
-
-Business Contact
-
-</p>
-
-
-<a href="mailto:Veridate.team@gmail.com"
-class="text-blue-400">
-
-
-Veridate.team@gmail.com
-
-
-</a>
-
-
-</div>
-
-
-
-</section>
-
-
-
-
-
-
-<!-- FOOTER -->
-
-
-<footer class="border-t border-zinc-800 py-8 text-center text-zinc-500">
-
-
-<div>
-
-
-© 2026 VeriDate. All Rights Reserved.
-
-
-</div>
-
-
-
-<div class="mt-3">
-
-
-<a href="mailto:Veridate.team@gmail.com"
-class="hover:text-white">
-
-
-Veridate.team@gmail.com
-
-
-</a>
-
-
-</div>
-
-
-
-</footer>
-
-
-
-
-
+<body class="bg-zinc-950 text-zinc-200 antialiased">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 w-full z-50 bg-zinc-950/80 backdrop-blur-xl border-b border-zinc-800/80">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center font-bold text-xl text-white">V</div>
+        <span class="heading-font text-xl tracking-tight">VeriDate</span>
+      </div>
+
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
+        <a href="#problem" class="hover:text-white transition">Problem</a>
+        <a href="#solution" class="hover:text-white transition">Solution</a>
+        <a href="#how" class="hover:text-white transition">How it Works</a>
+        <a href="#platforms" class="hover:text-white transition">Platforms</a>
+      </div>
+
+      <a href="https://tally.so/r/A7OkkN" target="_blank"
+         class="bg-white text-zinc-900 px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-zinc-100 transition">
+        Join Beta
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-bg min-h-screen flex items-center pt-20 pb-16">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-medium mb-6">
+          <span class="w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse"></span>
+          Private Beta Now Open
+        </div>
+
+        <h1 class="heading-font text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight neon">
+          Verify the Person.<br>
+          <span class="text-blue-400">Trust the Connection.</span>
+        </h1>
+
+        <p class="mt-7 text-lg sm:text-xl text-zinc-400 max-w-lg leading-relaxed">
+          AI-powered identity verification, liveness detection, trust scoring, and fraud intelligence — the infrastructure layer for safer digital platforms.
+        </p>
+
+        <div class="mt-10 flex flex-wrap gap-4">
+          <a href="https://tally.so/r/A7OkkN" target="_blank"
+             class="inline-flex items-center gap-2 bg-white text-zinc-900 px-8 py-4 rounded-2xl font-semibold hover:bg-zinc-100 transition shadow-lg shadow-white/10">
+            Join Private Beta
+            <i class="fa-solid fa-arrow-right text-sm"></i>
+          </a>
+          <a href="mailto:Veridate.team@gmail.com?subject=VeriDate%20API%20Access%20Request"
+             class="inline-flex items-center gap-2 border border-zinc-600 hover:border-zinc-400 px-8 py-4 rounded-2xl font-medium transition">
+            Request API Access
+          </a>
+        </div>
+
+        <div class="mt-12 flex flex-wrap gap-x-8 gap-y-3 text-sm text-zinc-500">
+          <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Identity + Liveness</div>
+          <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Trust Scores</div>
+          <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Fraud Signals</div>
+        </div>
+      </div>
+
+      <!-- Hero visual card -->
+      <div class="glass rounded-3xl p-8 lg:p-10 relative overflow-hidden">
+        <div class="absolute -top-20 -right-20 w-64 h-64 bg-blue-600/20 rounded-full blur-3xl"></div>
+        <div class="relative text-center">
+          <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-blue-600/20 border border-blue-500/30 mb-6">
+            <i class="fa-solid fa-shield-halved text-4xl text-blue-400"></i>
+          </div>
+          <h3 class="heading-font text-2xl font-bold">Trust Score Engine</h3>
+          <p class="text-zinc-400 mt-3 text-sm leading-relaxed max-w-xs mx-auto">
+            Real-time identity signals + behavioral intelligence combined into a single trust metric.
+          </p>
+
+          <div class="mt-10 grid grid-cols-3 gap-4 text-center">
+            <div class="bg-zinc-900/60 rounded-2xl py-4">
+              <div class="text-2xl font-bold text-emerald-400">94</div>
+              <div class="text-[10px] tracking-widest text-zinc-500 mt-1">SCORE</div>
+            </div>
+            <div class="bg-zinc-900/60 rounded-2xl py-4">
+              <div class="text-2xl font-bold text-blue-400">✓</div>
+              <div class="text-[10px] tracking-widest text-zinc-500 mt-1">LIVE</div>
+            </div>
+            <div class="bg-zinc-900/60 rounded-2xl py-4">
+              <div class="text-2xl font-bold text-blue-400">ID</div>
+              <div class="text-[10px] tracking-widest text-zinc-500 mt-1">VERIFIED</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section id="problem" class="py-24 bg-zinc-900/50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-2xl">
+        <p class="text-blue-400 text-sm font-medium tracking-widest uppercase mb-3">The Problem</p>
+        <h2 class="heading-font text-4xl sm:text-5xl font-bold tracking-tight">The internet has a trust problem.</h2>
+        <p class="mt-5 text-zinc-400 text-lg">Fake accounts, scams, bots, and impersonation are destroying confidence across every digital platform.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 mt-14">
+        <div class="glass p-8 rounded-3xl card-hover fade-up">
+          <div class="w-12 h-12 rounded-xl bg-rose-500/10 flex items-center justify-center text-rose-400 text-xl mb-5">
+            <i class="fa-solid fa-user-secret"></i>
+          </div>
+          <h3 class="text-xl font-semibold">Fake Accounts & Bots</h3>
+          <p class="text-zinc-400 mt-3 text-sm leading-relaxed">Synthetic identities and automated accounts flood platforms, making it impossible to know who’s real.</p>
+        </div>
+        <div class="glass p-8 rounded-3xl card-hover fade-up">
+          <div class="w-12 h-12 rounded-xl bg-rose-500/10 flex items-center justify-center text-rose-400 text-xl mb-5">
+            <i class="fa-solid fa-mask"></i>
+          </div>
+          <h3 class="text-xl font-semibold">Scams & Impersonation</h3>
+          <p class="text-zinc-400 mt-3 text-sm leading-relaxed">Users have no reliable way to verify the person on the other side of a message or profile.</p>
+        </div>
+        <div class="glass p-8 rounded-3xl card-hover fade-up">
+          <div class="w-12 h-12 rounded-xl bg-rose-500/10 flex items-center justify-center text-rose-400 text-xl mb-5">
+            <i class="fa-solid fa-link-slash"></i>
+          </div>
+          <h3 class="text-xl font-semibold">No Trust Infrastructure</h3>
+          <p class="text-zinc-400 mt-3 text-sm leading-relaxed">Platforms lack a shared, verifiable layer of identity and reputation signals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section id="solution" class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto">
+        <p class="text-blue-400 text-sm font-medium tracking-widest uppercase mb-3">The Solution</p>
+        <h2 class="heading-font text-4xl sm:text-5xl font-bold tracking-tight">The trust layer of the internet</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
+        <div class="glass p-7 rounded-3xl card-hover fade-up">
+          <div class="w-11 h-11 rounded-xl bg-blue-600/20 flex items-center justify-center text-blue-400 mb-5">
+            <i class="fa-solid fa-id-card"></i>
+          </div>
+          <h3 class="font-semibold text-lg">Identity Verification</h3>
+          <p class="text-zinc-400 mt-2 text-sm">Confirm real humans with trusted identity checks.</p>
+        </div>
+        <div class="glass p-7 rounded-3xl card-hover fade-up">
+          <div class="w-11 h-11 rounded-xl bg-purple-600/20 flex items-center justify-center text-purple-400 mb-5">
+            <i class="fa-solid fa-eye"></i>
+          </div>
+          <h3 class="font-semibold text-lg">Liveness Detection</h3>
+          <p class="text-zinc-400 mt-2 text-sm">Stop photos, videos, and deepfakes in real time.</p>
+        </div>
+        <div class="glass p-7 rounded-3xl card-hover fade-up">
+          <div class="w-11 h-11 rounded-xl bg-emerald-600/20 flex items-center justify-center text-emerald-400 mb-5">
+            <i class="fa-solid fa-chart-simple"></i>
+          </div>
+          <h3 class="font-semibold text-lg">Trust Scoring</h3>
+          <p class="text-zinc-400 mt-2 text-sm">Dynamic reputation scores from verified signals.</p>
+        </div>
+        <div class="glass p-7 rounded-3xl card-hover fade-up">
+          <div class="w-11 h-11 rounded-xl bg-amber-600/20 flex items-center justify-center text-amber-400 mb-5">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3 class="font-semibold text-lg">Fraud Intelligence</h3>
+          <p class="text-zinc-400 mt-2 text-sm">Detect coordinated abuse and emerging threats.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="py-24 bg-zinc-900/50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <p class="text-blue-400 text-sm font-medium tracking-widest uppercase mb-3">How it Works</p>
+        <h2 class="heading-font text-4xl sm:text-5xl font-bold tracking-tight">From profile to trusted connection</h2>
+      </div>
+
+      <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between gap-10 md:gap-4">
+        <!-- connecting line (desktop) -->
+        <div class="hidden md:block absolute top-10 left-[10%] right-[10%] h-px workflow-line"></div>
+
+        <div class="relative flex-1 text-center fade-up">
+          <div class="w-16 h-16 mx-auto rounded-2xl bg-zinc-800 border border-zinc-700 flex items-center justify-center text-2xl mb-5">👤</div>
+          <div class="text-xs font-mono text-blue-400 tracking-widest">01</div>
+          <div class="font-semibold mt-2">User Profile</div>
+          <p class="text-zinc-500 text-sm mt-1 max-w-[160px] mx-auto">User starts verification</p>
+        </div>
+
+        <div class="relative flex-1 text-center fade-up">
+          <div class="w-16 h-16 mx-auto rounded-2xl bg-zinc-800 border border-zinc-700 flex items-center justify-center text-2xl mb-5">📸</div>
+          <div class="text-xs font-mono text-blue-400 tracking-widest">02</div>
+          <div class="font-semibold mt-2">Verification</div>
+          <p class="text-zinc-500 text-sm mt-1 max-w-[160px] mx-auto">ID + liveness check</p>
+        </div>
+
+        <div class="relative flex-1 text-center fade-up">
+          <div class="w-16 h-16 mx-auto rounded-2xl bg-zinc-800 border border-zinc-700 flex items-center justify-center text-2xl mb-5">🔗</div>
+          <div class="text-xs font-mono text-blue-400 tracking-widest">03</div>
+          <div class="font-semibold mt-2">Trust Signals</div>
+          <p class="text-zinc-500 text-sm mt-1 max-w-[160px] mx-auto">Behavioral + device data</p>
+        </div>
+
+        <div class="relative flex-1 text-center fade-up">
+          <div class="w-16 h-16 mx-auto rounded-2xl bg-emerald-900/40 border border-emerald-500/30 flex items-center justify-center text-2xl mb-5">⭐</div>
+          <div class="text-xs font-mono text-emerald-400 tracking-widest">04</div>
+          <div class="font-semibold mt-2 text-emerald-400">Trust Score</div>
+          <p class="text-zinc-500 text-sm mt-1 max-w-[160px] mx-auto">Safer connections</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLATFORMS -->
+  <section id="platforms" class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="text-blue-400 text-sm font-medium tracking-widest uppercase mb-3">For Platforms</p>
+          <h2 class="heading-font text-4xl sm:text-5xl font-bold tracking-tight">Built for the next generation of digital platforms</h2>
+          <p class="mt-6 text-zinc-400 text-lg leading-relaxed">
+            Integrate VeriDate via simple APIs and SDKs. Give your users a clear signal of who is real — and who is not.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="glass p-6 rounded-2xl card-hover">
+            <div class="text-2xl mb-3">❤️</div>
+            <div class="font-semibold">Dating Platforms</div>
+            <p class="text-zinc-500 text-sm mt-1">Reduce catfishing & increase real connections</p>
+          </div>
+          <div class="glass p-6 rounded-2xl card-hover">
+            <div class="text-2xl mb-3">👥</div>
+            <div class="font-semibold">Social Networks</div>
+            <p class="text-zinc-500 text-sm mt-1">Fight bots and impersonation at scale</p>
+          </div>
+          <div class="glass p-6 rounded-2xl card-hover">
+            <div class="text-2xl mb-3">🛒</div>
+            <div class="font-semibold">Marketplaces</div>
+            <p class="text-zinc-500 text-sm mt-1">Verify sellers and build buyer confidence</p>
+          </div>
+          <div class="glass p-6 rounded-2xl card-hover">
+            <div class="text-2xl mb-3">💬</div>
+            <div class="font-semibold">Online Communities</div>
+            <p class="text-zinc-500 text-sm mt-1">Keep discussions human and high-quality</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INVESTOR / MISSION -->
+  <section class="py-24 bg-zinc-900/50">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="text-blue-400 text-sm font-medium tracking-widest uppercase mb-4">Our Mission</p>
+      <h2 class="heading-font text-4xl sm:text-5xl font-bold tracking-tight leading-tight">
+        “Building the trust layer of the internet.”
+      </h2>
+      <p class="mt-8 text-zinc-400 text-lg leading-relaxed">
+        VeriDate is developing the foundational infrastructure that will let platforms and users know — with confidence — who is on the other side of every digital interaction.
+      </p>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section id="contact" class="py-28">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="heading-font text-4xl sm:text-5xl font-bold tracking-tight">Ready to restore trust online?</h2>
+      <p class="mt-6 text-zinc-400 text-lg">
+        We’re currently in private beta and looking for early partners, platforms, and builders who care about digital trust.
+      </p>
+
+      <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://tally.so/r/A7OkkN" target="_blank"
+           class="inline-flex items-center justify-center gap-2 bg-white text-zinc-900 px-10 py-5 rounded-2xl font-semibold text-lg hover:bg-zinc-100 transition shadow-xl shadow-white/5">
+          Join the Private Beta
+          <i class="fa-solid fa-arrow-right text-sm"></i>
+        </a>
+        <a href="mailto:Veridate.team@gmail.com?subject=VeriDate%20API%20Access%20Request"
+           class="inline-flex items-center justify-center border border-zinc-600 hover:border-zinc-400 px-10 py-5 rounded-2xl font-medium text-lg transition">
+          Request API Access
+        </a>
+      </div>
+
+      <p class="mt-10 text-zinc-500 text-sm">
+        Business inquiries →
+        <a href="mailto:Veridate.team@gmail.com" class="text-blue-400 hover:underline">Veridate.team@gmail.com</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-zinc-800/80 py-10">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-zinc-500">
+      <div class="flex items-center gap-2">
+        <div class="w-7 h-7 bg-blue-600 rounded-lg flex items-center justify-center text-white text-sm font-bold">V</div>
+        <span>© 2026 VeriDate. All rights reserved.</span>
+      </div>
+      <a href="mailto:Veridate.team@gmail.com" class="hover:text-white transition">Veridate.team@gmail.com</a>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href');
+        if (id.length > 1) {
+          e.preventDefault();
+          document.querySelector(id)?.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Fade-up on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
 </body>
-
 </html>
