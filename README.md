@@ -5,6 +5,13 @@
 VeriDate is building the trust layer of the internet through AI-powered identity verification, liveness detection, trust scoring, and fraud intelligence.
 
 ---
+## Contact
+
+For beta access, partnerships, or API discussions:
+
+veridate.team@gmail.com
+
+
 
 ## The Problem
 
@@ -65,9 +72,5 @@ Future development:
 - Platform integrations
 
 ---
-
-## Vision
-
-Building the trust layer of the internet.
 
 © 2026 VeriDate
