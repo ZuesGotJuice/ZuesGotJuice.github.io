@@ -4,52 +4,53 @@
 
 VeriDate is building the trust layer of the internet through AI-powered identity verification, liveness detection, trust scoring, and fraud intelligence.
 
+Our mission is to help digital platforms create safer, more trustworthy interactions by providing identity signals, verification infrastructure, and fraud intelligence.
+
 ---
-## Contact
 
-For beta access, partnerships, or API discussions:
+## 🚀 Private Beta
 
-veridate.team@gmail.com
+Interested in early access?
 
+Join the VeriDate Private Beta:
 
+https://tally.so/r/A7OkkN
+
+---
 
 ## The Problem
 
-Digital platforms face growing challenges:
+The internet has a trust problem.
 
 - Fake accounts
-- Identity impersonation
-- Scams
-- Bots
-- Lack of reliable trust signals
-
-Users need a better way to know who they are interacting with online.
+- Bots and synthetic identities
+- Impersonation
+- Online fraud
+- Lack of reliable reputation systems
 
 ---
 
 ## The Solution
 
-VeriDate provides:
+VeriDate combines:
 
 ### Identity Verification
-
-Confirm users through secure verification methods.
+Confirm users through trusted verification methods.
 
 ### Liveness Detection
-
 Help prevent fake identities and deepfake attempts.
 
 ### Trust Scoring
-
-Generate reputation based on verified signals.
+Generate reputation based on verified identity signals.
 
 ### Fraud Intelligence
-
-Detect suspicious behavior and identity abuse.
+Detect suspicious activity and identity abuse.
 
 ---
 
-## Built For
+## Built For Digital Platforms
+
+VeriDate is designed for:
 
 - Dating platforms
 - Social networks
@@ -59,17 +60,23 @@ Detect suspicious behavior and identity abuse.
 
 ---
 
-## Current Status
+## Current Development
 
-🚧 MVP Development In Progress
+VeriDate is currently building its MVP, backend infrastructure, and verification systems.
 
-Future development:
+Current focus:
 
-- Verification APIs
+- API architecture
+- Identity verification workflows
 - Trust scoring engine
 - Fraud intelligence systems
-- Developer SDKs
-- Platform integrations
+- Developer integrations
+
+---
+
+## Vision
+
+Building the trust layer of the internet.
 
 ---
 
