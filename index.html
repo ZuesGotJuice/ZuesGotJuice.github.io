@@ -1,158 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO -->
-  <meta name="description" content="VeriDate helps platforms build trust through identity verification, fraud intelligence, and authenticity signals.">
+<title>VeriDate — Verify the Person. Trust the Connection.</title>
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="VeriDate — Verify the Person. Trust the Connection." />
-  <meta property="og:description" content="Identity verification and trust technology for platforms that care about safety and fraud prevention." />
-  <meta property="og:image" content="https://zuesgotjuice.github.io/og-image.png" />
-  <meta property="og:url" content="https://zuesgotjuice.github.io/" />
+<meta name="description" content="VeriDate helps platforms build trust through identity verification, fraud intelligence, and authenticity signals.">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
+<meta property="og:title" content="VeriDate — Verify the Person. Trust the Connection.">
+<meta property="og:description" content="Identity verification and trust technology for safer online platforms.">
+<meta property="og:image" content="https://zuesgotjuice.github.io/og-image.png">
+<meta property="og:url" content="https://zuesgotjuice.github.io/">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png" />
+<link rel="icon" type="image/png" href="favicon.png">
 
-  <title>VeriDate — Identity Verification & Trust Technology</title>
+<style>
 
-  <script src="https://cdn.tailwindcss.com"></script>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f9fafb;
+  color: #111827;
+}
+
+section {
+  padding: 80px 24px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.hero {
+  background: white;
+  text-align: center;
+  padding: 100px 24px;
+}
+
+h1 {
+  font-size: 52px;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+p {
+  color: #4b5563;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 32px;
+  background: black;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  opacity: .85;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  margin-top: 20px;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 20px;
+}
+
+.badges {
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.badge {
+  background:white;
+  padding:12px 20px;
+  border-radius:12px;
+}
+
+footer {
+  background:black;
+  color:white;
+  text-align:center;
+  padding:40px 20px;
+}
+
+footer p {
+  color:#9ca3af;
+}
+
+.modal {
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.6);
+  justify-content:center;
+  align-items:center;
+}
+
+.modal-box {
+  background:white;
+  padding:35px;
+  border-radius:16px;
+  max-width:420px;
+  text-align:center;
+}
+
+.close {
+  margin-top:20px;
+  padding:10px 20px;
+}
+
+</style>
+
 </head>
 
-<body class="bg-gray-50 text-gray-900">
 
-  <!-- HERO -->
-  <section class="text-center py-24 bg-white px-6">
-    <h1 class="text-4xl font-bold">Online trust is broken.</h1>
+<body>
 
-    <p class="mt-4 text-lg max-w-2xl mx-auto text-gray-600">
-      Fake profiles, scammers, bots, and impersonation continue to impact platforms and their users every day.
-    </p>
 
-    <p class="mt-4 text-lg max-w-2xl mx-auto text-gray-600">
-      VeriDate is building identity verification and trust technology designed to help platforms reduce fraud and build safer online experiences.
-    </p>
+<section class="hero">
 
-    <button onclick="openBetaModal()" class="mt-8 px-8 py-3 bg-black text-white rounded-lg text-lg">
-      Join Private Beta
-    </button>
-  </section>
+<div class="container">
 
-  <!-- WHAT VERIDATE DOES -->
-  <section class="py-20 max-w-4xl mx-auto px-6">
-    <h2 class="text-3xl font-semibold">Identity Verification & Authenticity Signals</h2>
-    <p class="mt-4 text-gray-600 leading-relaxed">
-      Platforms need more than simple verification. VeriDate combines identity checks, phone verification, liveness detection, and behavioral signals into an authenticity confidence layer — helping platforms reduce fake accounts, scams, and impersonation.
-    </p>
-  </section>
+<h1>
+Verify the person.<br>
+Trust the connection.
+</h1>
 
-  <!-- SECURITY SECTION -->
-  <section class="py-20 max-w-4xl mx-auto px-6">
-    <h2 class="text-3xl font-semibold">Security & Privacy First</h2>
+<p>
+Online trust is broken. Fake profiles, scammers, bots, and impersonation
+continue to impact digital platforms and their users.
+</p>
 
-    <p class="mt-4 text-gray-600">
-      VeriDate is being built with privacy and security as core principles.
-    </p>
+<p>
+VeriDate is building identity verification and trust intelligence technology
+designed to help platforms create safer online experiences.
+</p>
 
-    <ul class="mt-6 space-y-2 text-gray-600">
-      <li>Industry-standard security practices are being implemented throughout development.</li>
-      <li>Privacy and data minimization are core product principles.</li>
-      <li>Enterprise-grade security and compliance requirements are part of our long-term product roadmap.</li>
-    </ul>
+<button class="btn" onclick="openBeta()">
+Join Private Beta
+</button>
 
-    <p class="text-sm text-gray-500 mt-3">
-      (We do not claim SOC 2, GDPR certification, HIPAA, or ISO compliance.)
-    </p>
-  </section>
+</div>
 
-  <!-- BUILT FOR -->
-  <section class="py-20 max-w-4xl mx-auto px-6">
-    <h2 class="text-3xl font-semibold">Built for Platforms Where Trust Matters</h2>
+</section>
 
-    <ul class="mt-6 space-y-2 text-gray-600">
-      <li>Dating apps</li>
-      <li>Marketplaces</li>
-      <li>Communities</li>
-      <li>Social platforms</li>
-    </ul>
-  </section>
 
-  <!-- BUILDING IN PUBLIC -->
-  <section class="py-20 max-w-4xl mx-auto px-6">
-    <h2 class="text-3xl font-semibold">Building in Public</h2>
 
-    <p class="mt-4 text-gray-600 leading-relaxed">
-      VeriDate is currently in private beta and being built in public. We're actively gathering feedback from founders, developers, trust & safety professionals, and early adopters as we shape the future of digital trust technology.
-    </p>
+<section>
 
-    <p class="mt-4 text-gray-600">
-      If you're interested in identity verification, fraud prevention, or safer online communities, we'd love to hear from you.
-    </p>
-  </section>
+<div class="container">
 
-  <!-- FOUNDER SECTION -->
-  <section class="py-20 max-w-4xl mx-auto px-6">
-    <h2 class="text-3xl font-semibold">Meet the Founder</h2>
+<h2>
+Identity Verification & Authenticity Signals
+</h2>
 
-    <p class="mt-4 text-gray-600 leading-relaxed">
-      VeriDate is an independent startup founded by Jesus Alvarez and built in public from day one. The mission is simple: make it easier for platforms and users to know who they're interacting with online.
-    </p>
-  </section>
+<p>
+VeriDate combines identity checks, phone verification, liveness detection,
+and behavioral trust signals into an authenticity confidence layer designed
+for modern online platforms.
+</p>
 
-  <!-- FOOTER -->
-  <footer class="bg-black text-white py-12 text-center">
-    <p class="text-gray-300">Business Inquiries: veridate.team@gmail.com</p>
+</div>
 
-    <p class="mt-3 text-gray-500 text-sm">
-      Privacy Policy (coming soon) • Terms of Service (coming soon)
-    </p>
+</section>
 
-    <p class="mt-6 text-gray-400 text-sm">© 2026 VeriDate</p>
-  </footer>
 
-  <!-- MODAL -->
-  <div id="betaModal" class="fixed inset-0 bg-black bg-opacity-60 hidden justify-center items-center">
-    <div class="bg-white p-8 rounded-xl max-w-md text-center">
-      <h3 class="text-2xl font-semibold">Join the Private Beta</h3>
 
-      <p class="mt-3 text-gray-600">
-        We’re inviting early testers to help shape VeriDate.
-      </p>
+<section>
 
-      <p class="mt-3 text-sm text-gray-500">
-        VeriDate is currently under active development. Features, integrations, and product capabilities may evolve as we gather feedback from our private beta community.
-      </p>
+<div class="container">
 
-      <p class="mt-3 text-sm text-gray-500">
-        We welcome feedback from founders, developers, and early adopters interested in digital trust and online safety.
-      </p>
+<h2>
+How VeriDate Works
+</h2>
 
-      <a href="https://tally.so/r/A7OkkN" target="_blank"
-         class="mt-6 inline-block px-6 py-3 bg-black text-white rounded-lg">
-        Open Beta Form
-      </a>
 
-      <button onclick="closeBetaModal()" class="mt-4 px-4 py-2 border rounded-lg">
-        Close
-      </button>
-    </div>
-  </div>
+<div class="steps">
 
-  <script>
-    function openBetaModal() {
-      document.getElementById("betaModal").classList.remove("hidden");
-      document.getElementById("betaModal").classList.add("flex");
-    }
-    function closeBetaModal() {
-      document.getElementById("betaModal").classList.add("hidden");
-      document.getElementById("betaModal").classList.remove("flex");
-    }
-  </script>
+
+<div class="card">
+<h3>1. User Verification</h3>
+<p>
+Users complete identity and authenticity verification checks.
+</p>
+</div>
+
+
+<div class="card">
+<h3>2. Trust Intelligence</h3>
+<p>
+Verification results and trust signals are analyzed.
+</p>
+</div>
+
+
+<div class="card">
+<h3>3. Platform Protection</h3>
+<p>
+Platforms receive confidence signals to help reduce fraud.
+</p>
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section>
+
+<div class="container">
+
+<h2>
+Built For Platforms Where Trust Matters
+</h2>
+
+<div class="badges">
+
+<div class="badge">
+Dating Platforms
+</div>
+
+<div class="badge">
+Marketplaces
+</div>
+
+<div class="badge">
+Communities
+</div>
+
+<div class="badge">
+Social Platforms
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section>
+
+<div class="container">
+
+<h2>
+Building In Public
+</h2>
+
+<p>
+VeriDate is currently in private beta and being built in public.
+We are gathering feedback from founders, developers, and early adopters
+interested in identity verification and safer online communities.
+</p>
+
+</div>
+
+</section>
+
+
+
+<section>
+
+<div class="container">
+
+<h2>
+Meet The Founder
+</h2>
+
+<p>
+VeriDate is an independent startup founded by Jesus Alvarez.
+The mission is simple: make online interactions more authentic,
+transparent, and trustworthy.
+</p>
+
+</div>
+
+</section>
+
+
+
+<footer>
+
+<p>
+Business inquiries: veridate.team@gmail.com
+</p>
+
+<p>
+© 2026 VeriDate
+</p>
+
+</footer>
+
+
+
+
+<div id="modal" class="modal">
+
+<div class="modal-box">
+
+<h2>
+Join The Private Beta
+</h2>
+
+<p>
+Help shape the future of online trust technology.
+</p>
+
+
+<a class="btn" href="https://tally.so/r/A7OkkN">
+Open Beta Form
+</a>
+
+
+<br>
+
+
+<button class="close" onclick="closeBeta()">
+Close
+</button>
+
+
+</div>
+
+</div>
+
+
+
+<script>
+
+function openBeta(){
+
+document.getElementById("modal").style.display="flex";
+
+}
+
+
+function closeBeta(){
+
+document.getElementById("modal").style.display="none";
+
+}
+
+
+document.getElementById("modal").onclick=function(e){
+
+if(e.target===this){
+
+closeBeta();
+
+}
+
+}
+
+</script>
+
 
 </body>
 </html>
