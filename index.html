@@ -1,669 +1,735 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>VeriDate — Verify the Person. Trust the Connection.</title>
-
-<meta name="description" content="VeriDate helps platforms build trust through identity verification, fraud intelligence, and authenticity signals.">
-
-<meta property="og:title" content="VeriDate — Verify the Person. Trust the Connection.">
-<meta property="og:description" content="Identity verification and trust technology for safer online platforms.">
-<meta property="og:image" content="https://zuesgotjuice.github.io/og-image.png">
-<meta property="og:url" content="https://zuesgotjuice.github.io/">
-
-<link rel="icon" type="image/png" href="favicon.png">
-
-
-<style>
-
-* {
-box-sizing:border-box;
-}
-
-
-body {
-margin:0;
-font-family:Inter,Arial,Helvetica,sans-serif;
-background:#f8fafc;
-color:#111827;
-}
-
-
-.container {
-max-width:1000px;
-margin:auto;
-padding:0 24px;
-}
-
-
-section {
-padding:90px 0;
-}
-
-
-.logo {
-width:130px;
-margin-bottom:35px;
-}
-
-
-.hero {
-
-text-align:center;
-
-background:
-radial-gradient(circle at top,#dbeafe,transparent 40%),
-linear-gradient(180deg,#ffffff,#f8fafc);
-
-padding:120px 0;
-
-}
-
-
-h1 {
-
-font-size:clamp(42px,6vw,64px);
-
-line-height:1.05;
-
-margin:0 auto 25px;
-
-letter-spacing:-2px;
-
-}
-
-
-h2 {
-
-font-size:36px;
-
-letter-spacing:-1px;
-
-margin-bottom:20px;
-
-}
-
-
-h3 {
-
-font-size:22px;
-
-margin-top:0;
-
-}
-
-
-p {
-
-font-size:18px;
-
-line-height:1.7;
-
-color:#4b5563;
-
-}
-
-
-.hero p {
-
-max-width:720px;
-
-margin:20px auto;
-
-}
-
-
-.btn {
-
-display:inline-block;
-
-margin-top:30px;
-
-background:#000;
-
-color:white;
-
-padding:15px 34px;
-
-border-radius:12px;
-
-text-decoration:none;
-
-font-weight:600;
-
-border:none;
-
-cursor:pointer;
-
-font-size:16px;
-
-}
-
-
-.btn:hover {
-
-opacity:.85;
-
-}
-
-
-
-.grid {
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-
-gap:25px;
-
-}
-
-
-
-.card {
-
-background:white;
-
-padding:35px;
-
-border-radius:20px;
-
-border:1px solid #e5e7eb;
-
-box-shadow:0 10px 30px rgba(0,0,0,.05);
-
-}
-
-
-
-.icon {
-
-font-size:32px;
-
-margin-bottom:15px;
-
-}
-
-
-
-.dark {
-
-background:#111827;
-
-color:white;
-
-}
-
-
-.dark h2 {
-
-color:white;
-
-}
-
-
-.dark p {
-
-color:#d1d5db;
-
-}
-
-
-
-.trust-grid {
-
-display:flex;
-
-flex-wrap:wrap;
-
-gap:15px;
-
-}
-
-
-
-.badge {
-
-background:white;
-
-padding:15px 22px;
-
-border-radius:999px;
-
-border:1px solid #e5e7eb;
-
-}
-
-
-
-footer {
-
-background:#000;
-
-padding:50px 20px;
-
-text-align:center;
-
-}
-
-
-
-footer p {
-
-color:#9ca3af;
-
-font-size:15px;
-
-}
-
-
-
-.modal {
-
-display:none;
-
-position:fixed;
-
-inset:0;
-
-background:rgba(0,0,0,.65);
-
-justify-content:center;
-
-align-items:center;
-
-padding:20px;
-
-}
-
-
-
-.modal-box {
-
-background:white;
-
-max-width:450px;
-
-padding:40px;
-
-border-radius:20px;
-
-text-align:center;
-
-}
-
-
-
-.close {
-
-margin-top:20px;
-
-padding:10px 20px;
-
-border-radius:8px;
-
-border:1px solid #ddd;
-
-background:white;
-
-cursor:pointer;
-
-}
-
-
-</style>
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VeriDate — Verify the Person. Trust the Connection.</title>
+  <meta name="description" content="VeriDate helps platforms build trust through identity verification, fraud intelligence, and authenticity signals.">
+  <meta property="og:title" content="VeriDate — Verify the Person. Trust the Connection.">
+  <meta property="og:description" content="Identity verification and trust technology for safer online platforms.">
+  <meta property="og:image" content="https://zuesgotjuice.github.io/og-image.png">
+  <meta property="og:url" content="https://zuesgotjuice.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fafafa;
+      --surface: #ffffff;
+      --text: #0a0a0a;
+      --text-secondary: #525252;
+      --border: #e5e5e5;
+      --accent: #111111;
+      --blue: #2563eb;
+      --blue-soft: #eff6ff;
+      --radius: 16px;
+      --radius-sm: 10px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, .heading {
+      font-family: 'Instrument Sans', 'Inter', system-ui, sans-serif;
+      letter-spacing: -0.03em;
+      font-weight: 600;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(250, 250, 250, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    .nav-logo img {
+      height: 28px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: none;
+      gap: 32px;
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-cta {
+      font-size: 14px;
+      font-weight: 500;
+      background: var(--accent);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+
+    .nav-cta:hover {
+      opacity: 0.85;
+    }
+
+    @media (min-width: 768px) {
+      .nav-links {
+        display: flex;
+      }
+    }
+
+    /* HERO */
+    .hero {
+      padding: 96px 0 80px;
+      text-align: center;
+      background:
+        radial-gradient(ellipse 80% 50% at 50% -20%, #dbeafe 0%, transparent 60%),
+        var(--bg);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--blue);
+      background: var(--blue-soft);
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 28px;
+    }
+
+    .hero-badge span {
+      width: 6px;
+      height: 6px;
+      background: var(--blue);
+      border-radius: 50%;
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 7vw, 64px);
+      line-height: 1.08;
+      max-width: 780px;
+      margin: 0 auto 24px;
+    }
+
+    .hero-sub {
+      font-size: 18px;
+      color: var(--text-secondary);
+      max-width: 560px;
+      margin: 0 auto 40px;
+      line-height: 1.65;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 12px 24px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.88;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      background: #f5f5f5;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 88px 0;
+    }
+
+    .section-label {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(28px, 4vw, 40px);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .section-desc {
+      font-size: 17px;
+      color: var(--text-secondary);
+      max-width: 560px;
+      line-height: 1.65;
+    }
+
+    /* PROBLEM */
+    .problem-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 48px;
+    }
+
+    @media (min-width: 640px) {
+      .problem-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .problem-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+
+    .problem-card h3 {
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .problem-card p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    /* PRODUCT */
+    .product {
+      background: #0a0a0a;
+      color: white;
+    }
+
+    .product .section-label {
+      color: #93c5fd;
+    }
+
+    .product .section-desc {
+      color: #a3a3a3;
+    }
+
+    .product-visual {
+      margin-top: 56px;
+      background: #171717;
+      border: 1px solid #262626;
+      border-radius: 20px;
+      padding: 40px 32px;
+      display: grid;
+      gap: 24px;
+    }
+
+    @media (min-width: 768px) {
+      .product-visual {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 48px;
+      }
+    }
+
+    .product-item {
+      text-align: center;
+    }
+
+    .product-icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 16px;
+      background: #262626;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+
+    .product-item h3 {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .product-item p {
+      font-size: 14px;
+      color: #a3a3a3;
+      line-height: 1.5;
+    }
+
+    /* HOW IT WORKS */
+    .steps {
+      display: grid;
+      gap: 20px;
+      margin-top: 48px;
+    }
+
+    @media (min-width: 768px) {
+      .steps {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .step {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      position: relative;
+    }
+
+    .step-num {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--blue);
+      margin-bottom: 16px;
+    }
+
+    .step h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    /* PLATFORMS */
+    .platforms-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 40px;
+    }
+
+    @media (min-width: 640px) {
+      .platforms-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .platform-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 20px 16px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    /* ABOUT */
+    .about {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .about-content {
+      max-width: 640px;
+    }
+
+    .about p {
+      font-size: 17px;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+      line-height: 1.65;
+    }
+
+    /* FINAL CTA */
+    .final-cta {
+      text-align: center;
+      padding: 100px 0;
+    }
+
+    .final-cta h2 {
+      font-size: clamp(28px, 4vw, 40px);
+      margin-bottom: 16px;
+    }
+
+    .final-cta p {
+      font-size: 17px;
+      color: var(--text-secondary);
+      max-width: 480px;
+      margin: 0 auto 36px;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+      text-align: center;
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    @media (min-width: 640px) {
+      .footer-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+    }
+
+    /* MODAL */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .modal.open {
+      display: flex;
+    }
+
+    .modal-box {
+      background: white;
+      border-radius: 20px;
+      padding: 40px 32px;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+
+    .modal-box h2 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .modal-box p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      margin-bottom: 28px;
+    }
+
+    .modal-close {
+      margin-top: 16px;
+      background: none;
+      border: none;
+      font-size: 14px;
+      color: var(--text-secondary);
+      cursor: pointer;
+    }
+
+    .modal-close:hover {
+      color: var(--text);
+    }
+  </style>
 </head>
-
-
 <body>
 
-
-
-<section class="hero">
-
-<div class="container">
-
-
-<img 
-src="veridate-logo.png"
-alt="VeriDate logo"
-class="logo"
->
-
-
-<h1>
-Verify identity.<br>
-Build digital trust.
-</h1>
-
-
-<p>
-Online trust is broken. Fake profiles, scammers, bots, and impersonation
-impact platforms and their users every day.
-</p>
-
-
-<p>
-VeriDate is building identity verification and trust intelligence technology
-designed to help platforms create safer digital experiences.
-</p>
-
-
-<button class="btn" onclick="openBeta()">
-Join Private Beta
-</button>
-
-
-</div>
-
-</section>
-
-
-
-
-<section>
-
-<div class="container">
-
-
-<h2>
-Identity Verification & Trust Intelligence
-</h2>
-
-
-<p>
-VeriDate combines identity checks, phone verification, liveness detection,
-and behavioral signals into an authenticity confidence layer for modern
-online platforms.
-</p>
-
-
-</div>
-
-</section>
-
-
-
-
-<section>
-
-<div class="container">
-
-
-<h2>
-How VeriDate Works
-</h2>
-
-
-<div class="grid">
-
-
-<div class="card">
-
-<div class="icon">
-🔐
-</div>
-
-<h3>
-1. Verify Users
-</h3>
-
-<p>
-Users complete identity and authenticity checks.
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<div class="icon">
-🧠
-</div>
-
-<h3>
-2. Analyze Trust Signals
-</h3>
-
-<p>
-Verification results and behavioral signals create confidence scores.
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<div class="icon">
-🛡️
-</div>
-
-<h3>
-3. Protect Platforms
-</h3>
-
-<p>
-Platforms reduce fake accounts, fraud, and impersonation.
-</p>
-
-</div>
-
-
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-
-<section class="dark">
-
-
-<div class="container">
-
-
-<h2>
-Built For Platforms Where Trust Matters
-</h2>
-
-
-<p>
-Helping the next generation of digital platforms create safer communities.
-</p>
-
-
-<div class="trust-grid">
-
-<div class="badge">
-Dating Platforms
-</div>
-
-
-<div class="badge">
-Marketplaces
-</div>
-
-
-<div class="badge">
-Social Platforms
-</div>
-
-
-<div class="badge">
-Online Communities
-</div>
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<section>
-
-<div class="container">
-
-
-<h2>
-Building In Public
-</h2>
-
-
-<p>
-VeriDate is currently in private beta. We are working with founders,
-developers, and early adopters interested in identity verification,
-fraud prevention, and safer online experiences.
-</p>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<section>
-
-<div class="container">
-
-
-<h2>
-Meet The Founder
-</h2>
-
-
-<p>
-VeriDate is an independent startup founded by Jesus Alvarez and built
-publicly from day one with a mission to make online interactions more
-authentic, transparent, and trustworthy.
-</p>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<footer>
-
-
-<p>
-Business inquiries: veridate.team@gmail.com
-</p>
-
-
-<p>
-© 2026 VeriDate. All rights reserved.
-</p>
-
-
-</footer>
-
-
-
-
-
-
-<div id="modal" class="modal">
-
-
-<div class="modal-box">
-
-
-<h2>
-Join The Private Beta
-</h2>
-
-
-<p>
-Help shape the future of online trust technology.
-</p>
-
-
-
-<a class="btn" href="https://tally.so/r/A7OkkN">
-Open Beta Form
-</a>
-
-
-
-<br>
-
-
-<button class="close" onclick="closeBeta()">
-Close
-</button>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-<script>
-
-
-function openBeta(){
-
-document.getElementById("modal").style.display="flex";
-
-}
-
-
-
-function closeBeta(){
-
-document.getElementById("modal").style.display="none";
-
-}
-
-
-
-document.getElementById("modal").onclick=function(e){
-
-if(e.target===this){
-
-closeBeta();
-
-}
-
-}
-
-
-
-</script>
-
-
-
+  <!-- NAV -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="veridate-logo.png" alt="VeriDate">
+        VeriDate
+      </a>
+      <div class="nav-links">
+        <a href="#product">Product</a>
+        <a href="#how">How it works</a>
+        <a href="#platforms">Platforms</a>
+      </div>
+      <button class="nav-cta" onclick="openBeta()">Join Beta</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-badge">
+        <span></span>
+        Private Beta
+      </div>
+      <h1>Verify the person.<br>Trust the connection.</h1>
+      <p class="hero-sub">
+        VeriDate is building identity verification and trust intelligence technology to help platforms reduce fake accounts, scams, and impersonation.
+      </p>
+      <div class="hero-actions">
+        <button class="btn btn-primary" onclick="openBeta()">
+          Join Private Beta
+        </button>
+        <a href="mailto:veridate.team@gmail.com?subject=VeriDate%20API%20Access%20Request" class="btn btn-secondary">
+          Request API Access
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- PROBLEM -->
+  <section>
+    <div class="container">
+      <p class="section-label">The problem</p>
+      <h2 class="section-title">Online trust is broken</h2>
+      <p class="section-desc">
+        Fake profiles, bots, and impersonation make it hard for platforms and users to know who is real.
+      </p>
+
+      <div class="problem-grid">
+        <div class="problem-card">
+          <h3>Fake accounts & bots</h3>
+          <p>Synthetic and automated accounts pollute platforms and degrade user experience.</p>
+        </div>
+        <div class="problem-card">
+          <h3>Scams & impersonation</h3>
+          <p>Users have limited ways to verify the person on the other side of a profile or message.</p>
+        </div>
+        <div class="problem-card">
+          <h3>Missing trust signals</h3>
+          <p>Most platforms lack a reliable authenticity layer that users and operators can trust.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT -->
+  <section class="product" id="product">
+    <div class="container">
+      <p class="section-label">Product</p>
+      <h2 class="section-title">Identity verification & trust intelligence</h2>
+      <p class="section-desc">
+        VeriDate combines identity checks, phone verification, liveness detection, and behavioral signals into an authenticity confidence layer for modern platforms.
+      </p>
+
+      <div class="product-visual">
+        <div class="product-item">
+          <div class="product-icon">🔐</div>
+          <h3>Identity Verification</h3>
+          <p>Confirm users through trusted identity and authenticity checks.</p>
+        </div>
+        <div class="product-item">
+          <div class="product-icon">👁️</div>
+          <h3>Liveness Detection</h3>
+          <p>Help reduce photo, video, and synthetic identity attempts.</p>
+        </div>
+        <div class="product-item">
+          <div class="product-icon">📊</div>
+          <h3>Trust Signals</h3>
+          <p>Generate confidence scores from verification and behavioral data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how">
+    <div class="container">
+      <p class="section-label">How it works</p>
+      <h2 class="section-title">From verification to platform protection</h2>
+      <p class="section-desc">
+        A simple flow designed for platforms that need stronger authenticity signals.
+      </p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h3>Verify users</h3>
+          <p>Users complete identity and authenticity checks during onboarding or key moments.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h3>Analyze signals</h3>
+          <p>Verification results and behavioral data are combined into confidence signals.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h3>Protect the platform</h3>
+          <p>Platforms use those signals to reduce fraud, fake accounts, and impersonation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLATFORMS -->
+  <section id="platforms">
+    <div class="container">
+      <p class="section-label">Who it’s for</p>
+      <h2 class="section-title">Built for platforms where trust matters</h2>
+      <p class="section-desc">
+        Designed for digital products where knowing who is real directly affects safety and quality.
+      </p>
+
+      <div class="platforms-grid">
+        <div class="platform-card">Dating platforms</div>
+        <div class="platform-card">Marketplaces</div>
+        <div class="platform-card">Social platforms</div>
+        <div class="platform-card">Communities</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <div class="container">
+      <div class="about-content">
+        <p class="section-label">Building in public</p>
+        <h2 class="section-title">Early stage. Focused on the problem.</h2>
+        <p>
+          VeriDate is currently in private beta. We are working with founders, developers, and early partners who care about identity verification, fraud prevention, and safer online experiences.
+        </p>
+        <p>
+          Founded by Jesus Alvarez and built publicly from day one.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>Help shape the next layer of online trust</h2>
+      <p>
+        Join the private beta if you’re building a platform where authenticity matters.
+      </p>
+      <div class="hero-actions">
+        <button class="btn btn-primary" onclick="openBeta()">
+          Join Private Beta
+        </button>
+        <a href="mailto:veridate.team@gmail.com" class="btn btn-secondary">
+          Contact us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <div>© 2026 VeriDate</div>
+      <div class="footer-links">
+        <a href="mailto:veridate.team@gmail.com">veridate.team@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div id="modal" class="modal" onclick="backdropClose(event)">
+    <div class="modal-box">
+      <h2>Join the Private Beta</h2>
+      <p>Help shape identity verification and trust technology for modern platforms.</p>
+      <a href="https://tally.so/r/A7OkkN" class="btn btn-primary" style="width:100%;" target="_blank" rel="noopener">
+        Open Beta Form
+      </a>
+      <button class="modal-close" onclick="closeBeta()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    function openBeta() {
+      document.getElementById('modal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeBeta() {
+      document.getElementById('modal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function backdropClose(e) {
+      if (e.target.id === 'modal') closeBeta();
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const id = this.getAttribute('href');
+        if (id.length > 1) {
+          e.preventDefault();
+          document.querySelector(id)?.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
 </body>
-
 </html>
